@@ -1,0 +1,107 @@
+/* Sarah R. Greenhill - ASL Project | Week 1 - July 12, 2016 */
+
+
+/* Main */ 
+
+html, #main, body{ 
+	height:100%;
+}
+
+#main{
+	text-align: center;
+	font-family: Helvetica, sans-serif;
+}
+
+#content{
+    overflow-y: scroll;
+}
+
+/* Headings */
+
+#main h1{
+	font-family: 'Game Over', Helvetica, sans-serif;
+	color: #ffffff;
+	font-size: 8em;
+	text-shadow: 2px 2px 8px #000000;
+	margin-top: 1em;
+}
+
+#main h2{
+	color: #8c0258;
+}
+
+#main h3{
+	font-family: Helvetica, sans-serif;
+}
+
+/* Jumbotron */
+
+#main .jumbotron{
+	background-color: #e2e2e2;
+	height: 24em;
+	border-bottom: .4em #000000 solid;
+	margin: 0;
+}
+
+/* Warning */
+
+#warning{
+	margin: 0;
+	bottom: 0;
+}
+
+/* Logo */
+
+#main .logo{
+	float: left;
+	width: 40%;
+	position: absolute;
+	top: -5px;
+}
+
+#main span{
+	font-family: 'Game Over', Helvetica, sans-serif;
+	font-size: 3em;
+}
+
+/* Guild Member */
+
+#main .thumbnail{
+	display: inline-block;
+	padding: 1em;
+	margin-right: .5em;
+}
+
+/* Footer */
+
+#main .footer{
+   height: 14em;
+   width: 100%;
+   background: #000000;
+   margin-top: 2em;
+   position: absolute;
+}
+
+.footer p{
+	color: #a2a2a2;	
+	font-family: Helvetica, sans-serif;
+	margin-top: 1em;
+}
+
+/* Form */
+
+#main form{
+	padding-bottom: 2em;
+}
+
+#main .submit{
+	margin-left: 49.5em;
+
+}
+
+/* Fonts */ 
+
+@font-face {
+    font-family: Game Over;
+    src: url(/testCodeIgniter/fonts/game_over.ttf) format('truetype');
+}
