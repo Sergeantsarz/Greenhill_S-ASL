@@ -11,11 +11,6 @@
 		public function index(){
 			
 			$this->input->post();
-			//$username = $this->input->post("username");
-			//$passcode = $this->input->post("passcode");	
-			
-			//$this->session->set_userdata($username);
-			//$this->session->set_userdata($passcode);
 			
 			if(!$_POST){
 				$this->load->view('home_header');
@@ -39,28 +34,10 @@
 						
 					echo '<div id="warning" class="alert alert-danger" role="alert">' . 'WARNING: Incorrect username & password. Please try again!' . '</div>';
 				}else{
-											
-					if(!isset($data)){
-						//Load View
-						$this->load->model('CRUD');
-						$this->load->view('header');
-						$this->load->view('guildies');
-						$this->load->view('footer');
-
-						//Setting Values
-						$data = array(
-						'fName' => $this->input->post('fName'),
-						'charName' => $this->input->post('charName'),
-						'rank' => $this->input->post('rank'),
-						'profession_pri' => $this->input->post('profession_pri'),
-						'profession_sec' => $this->input->post('profession_sec')
-						);
-
-						//Transfer Data to Model
-						$this->CRUD->form_insert($data);
-						$data['message'] = 'Data Inserted Successfully!';
-					
-					}	
+										
+					$this->load->view('header');
+					$this->load->view('welcome_admin');
+					$this->load->view('footer');
 				}	
 			}
 		}					

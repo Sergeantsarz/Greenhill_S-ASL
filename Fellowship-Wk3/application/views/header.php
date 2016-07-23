@@ -77,7 +77,10 @@
 											<a href="<?php echo site_url('delete_guildie/delete_guildie_id'); ?>">Remove Members</a>
 										</li>
 										<li>
-											<a href="<?php echo site_url('members'); ?>">Members</a>
+											<a href="<?php echo  site_url('insert_guildie'); ?>">Add Members</a>
+										</li>
+										<li>
+											<a href="<?php echo site_url('members'); ?>">View Members</a>
 										</li>
 									</ul>
 								</li>

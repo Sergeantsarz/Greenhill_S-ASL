@@ -4,9 +4,10 @@ class Insert_guildie extends CI_Controller {
 		function __construct() {
 			parent::__construct();
 			//Load Model
-			$this->load->model('CRUD');
-			
-			function Add_Guildie() {
+			$this->load->model('CRUD');				
+		}
+		
+		function index() {
 			
 				//Setting Values
 				$data = array(
@@ -17,17 +18,20 @@ class Insert_guildie extends CI_Controller {
 					'profession_sec' => $this->input->post('profession_sec')
 				);
 				
-				//Transfer Data to Model
-				$this->CRUD->form_insert($data);
-				$data['message'] = 'Data Inserted Successfully';
-				
 				//Load View
 				$this->load->view('header');
-				$this->load->view('guildies', $data);
-				$this->load->view('footer');				
-			}
+				$this->load->view('insert_guildie', $data);
+				$this->load->view('footer');	
 				
-		}
+				if(isset($_POST['submit'])){
+					//Transfer Data to Model
+					$this->CRUD->form_insert($data);
+					
+					//Set that data was inserted
+					echo '<div id="warning" class="alert alert-success" role="alert">' . 'Data Inserted Successfully!' . '</div>';
+				}			
+			}
+
 		
 	}
 ?>

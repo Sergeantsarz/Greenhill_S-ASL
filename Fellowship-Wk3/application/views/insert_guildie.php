@@ -23,7 +23,3 @@
 	<input class="submit" type="submit" name="submit" value="Add New Member" />
 </form>
 <hr>
-
-<?php if (isset($message)) { ?>
-<CENTER><h3 style="color:green;">Success! Data Inserted.</h3></CENTER><br>
-<?php } ?>
